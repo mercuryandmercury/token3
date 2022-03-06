@@ -34,9 +34,10 @@ y_pred = rf_regressor.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 print('rmse is : ', rmse)
-
+st.write(" RMSE is ", rmse)
 r_squared = r2_score(y_test, y_pred)
-print('r_squared is : ', r_squared)
-
+print("r_squared is : ", r_squared)
+st.write( R^2 is ", r_squared)
 mae = mean_absolute_error(y_test, y_pred)
 print('mae is : ', mae)
+st.write(" MAE is ", mae)
