@@ -8,10 +8,10 @@ from sklearn.metrics import mean_absolute_error
 import streamlit as st
 import klib
 
-st.write("energy prediction ccpp")
+st.write("######energy prediction ccpp")
 
 df = pd.read_csv('energy_production (2).csv',sep=";")
-st.header("all the variables")
+st.write("all the variables")
 df
 klib.data_cleaning(df)
 klib.corr_plot(df, split='pos') 
