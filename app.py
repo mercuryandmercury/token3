@@ -11,6 +11,8 @@ import klib
 st.write("energy prediction ccpp")
 
 df = pd.read_csv('energy_production (2).csv',sep=";")
+st.header("all the variables")
+df
 klib.data_cleaning(df)
 klib.corr_plot(df, split='pos') 
 klib.corr_plot(df, split='neg')
