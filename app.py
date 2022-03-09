@@ -11,8 +11,8 @@ import klib
 st.write("######energy prediction ccpp")
 
 df = pd.read_csv('energy_production (2).csv',sep=";")
-st.write("all the variables")
-df
+st.write("all the variables",df)
+
 
 df.rename(columns={"temperature":"AT" , "exhaust_vacuum":"V" , "amb_pressure":"AP" , "r_humidity":"RH" , "energy_production": "PE"}, inplace=True)
 df_4 = df[['AT', 'V', 'AP', 'RH']]
@@ -29,10 +29,10 @@ y_pred = rf_regressor.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 print('rmse is : ', rmse)
-
+st.write("RMSE Result:", rmse)
 r_squared = r2_score(y_test, y_pred)
 print("r_squared is : ", r_squared)
-
+st.write("Rsqared Result:",r_squared)
 mae = mean_absolute_error(y_test, y_pred)
 print('mae is : ', mae)
-
+st.write("MAE Result:", mae)
