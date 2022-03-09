@@ -8,7 +8,7 @@ from sklearn.metrics import mean_absolute_error
 import streamlit as st
 import klib
 
-st.write("######energy prediction ccpp")
+st.write("energy prediction ccpp")
 
 df = pd.read_csv('energy_production (2).csv',sep=";")
 st.write("all the variables",df)
